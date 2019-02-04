@@ -44,7 +44,7 @@ let multiplication = function(){
     console.log(palierMulti)
     console.log(palierCourrantMulti);
 
-    if (nombreCookie > palierMulti[palierCourrantMulti]){
+    if (nombreCookie >= palierMulti[palierCourrantMulti]){
         multiplier*=2;
         nombreCookie -= palierMulti[palierCourrantMulti];
         score.textContent = nombreCookie;
@@ -68,8 +68,8 @@ let addition = function(){
     console.log(palierAddiCout);
     console.log(palierCourrantAddi);
 
-    if (nombreCookie > palierAddiCout[palierCourrantAddi]){
-        addition+= palierAddi[palierCourrantAddi];
+    if (nombreCookie >= palierAddiCout[palierCourrantAddi]){
+        additionnal = additionnal + palierAddi[palierCourrantAddi];
         nombreCookie -= palierAddiCout[palierCourrantAddi];
         score.textContent = nombreCookie;
         palierCourrantAddi++;
@@ -77,7 +77,7 @@ let addition = function(){
 
     }
     else {
-        if(palierAddiCout.length = palierCourrantAddi){
+        if(palierAddiCout.length <= palierCourrantAddi){
             message.textContent = "Addition maximum atteinte!";
         } else{
             message.textContent = "Pas assez de cookies";
