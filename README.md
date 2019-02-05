@@ -1,4 +1,4 @@
-#CookieClicker
+# CookieClicker
 
-##Solo Version, by Julien ripet
+## Solo Version, by Julien ripet
 
