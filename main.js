@@ -46,7 +46,7 @@ window.onload = function(){
     tableAddi.textContent = "+" + additionnal;
     tableMulti.textContent = "X" + multiplicateur;
     tableClicks.textContent = nombreClick;
-    tableTotal.textContent = 1 * multiplicateur + additionnal + "Cookies par click";
+    tableTotal.textContent = 1 * multiplicateur + additionnal + " Cookies par click";
     console.log(score.innerHTML);
 
     if (!boolAddition){
@@ -59,7 +59,7 @@ window.onload = function(){
 let main = function(){   
     nombreClick++;
     tableClicks.textContent = nombreClick;
-    tableTotal.textContent = 1 * multiplicateur + additionnal + "Cookies par click";
+    tableTotal.textContent = 1 * multiplicateur + additionnal + " Cookies par click";
     console.log(nombreClick);
     let show = function(){ 
             score.textContent = nombreCookie;
@@ -97,7 +97,7 @@ let augmenterMultiplicateur = function(){
         }
     }
     tableMulti.textContent = "X" + multiplicateur;
-    tableTotal.textContent = 1 * multiplicateur + additionnal + "Cookies par click";
+    tableTotal.textContent = 1 * multiplicateur + additionnal + " Cookies par click";
 
 }
 
@@ -126,5 +126,5 @@ let addition = function(){
         }
     }
     tableAddi.textContent = "+" + additionnal;
-    tableTotal.textContent = 1 * multiplicateur + additionnal + "Cookies par click";
+    tableTotal.textContent = 1 * multiplicateur + additionnal + " Cookies par click";
 }
