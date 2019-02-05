@@ -9,7 +9,9 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <button id="Cookie" type="button" onclick="main()"><img id="imgCookie"src="pictures/CookieV01.svg" alt="Cookies!"/></button>
+    <div id="cookie">
+        <button id="Cookie" type="button" onclick="main()"><img id="imgCookie"src="pictures/CookieV01.svg" alt="Cookies!"/></button>
+    </div>
     <button id="Multiplication" type="button" onclick="augmenterMultiplicateur()">Multiplication!</button>
     <button class="Addition" type="button" onclick="addition()">Addition!</button>
 
@@ -31,12 +33,16 @@
                 <td id="affichageClicks">PlaceHolder</td>
             </tr>
             <tr>
-                <td>Multiplicateur</td>
+                <td>Bonus Multiplicateur</td>
                 <td id="affichageMultiplicateur">PlaceHolder</td>
             </tr>
             <tr class="Addition">
-                <td>Addition</td>
+                <td>Bonus Addition</td>
                 <td id="affichageAddition">PlaceHolder</td>
+            </tr>
+            <tr> 
+                <td>Bonus total</td>
+                <td id="affichageTotal">PlaceHolder</td>
             </tr>
         </table>
     </div>

@@ -11,6 +11,7 @@ let btnAddition = document.getElementsByClassName("Addition"); // Init de la var
 let tableMulti = document.getElementById("affichageMultiplicateur");
 let tableAddi = document.getElementById("affichageAddition");
 let tableClicks = document.getElementById("affichageClicks");
+let tableTotal = document.getElementById("affichageTotal");
 
 let palierMultiCout = [1,20,50,100,200,500];    //Cout de chaque multiplicateur, augmente en fonction de palierCourrantMulti
 let palierCourrantMulti = 0;    //Sert à se déplacer dans le tableau palierMultiCout, pour augmenter le prix des multiplicateurs après chaque achat
@@ -38,12 +39,14 @@ window.onload = function(){
     tableMulti = document.getElementById("affichageMultiplicateur");
     tableAddi = document.getElementById("affichageAddition");
     tableClicks = document.getElementById("affichageClicks");
+    tableTotal = document.getElementById("affichageTotal");
 
     score.textContent = nombreCookie;
     message.textContent = "";
     tableAddi.textContent = "+" + additionnal;
     tableMulti.textContent = "X" + multiplicateur;
     tableClicks.textContent = nombreClick;
+    tableTotal.textContent = 1 * multiplicateur + additionnal + "Cookies par click";
     console.log(score.innerHTML);
 
     if (!boolAddition){
@@ -55,6 +58,8 @@ window.onload = function(){
 // Fonction principale, appelée dès que le Cookie est cliqué, ou quand l'auto-clicker s'active(à implémenter)
 let main = function(){   
     nombreClick++;
+    tableClicks.textContent = nombreClick;
+    tableTotal.textContent = 1 * multiplicateur + additionnal + "Cookies par click";
     console.log(nombreClick);
     let show = function(){ 
             score.textContent = nombreCookie;
@@ -63,7 +68,7 @@ let main = function(){
         nombreCookie =  nombreCookie + (1 *multiplicateur) + additionnal;
         show();
 };
-
+    
     let score = document.getElementById("Score");
     show();
     click01();
@@ -91,6 +96,9 @@ let augmenterMultiplicateur = function(){
             message.textContent = "Pas assez de cookies";
         }
     }
+    tableMulti.textContent = "X" + multiplicateur;
+    tableTotal.textContent = 1 * multiplicateur + additionnal + "Cookies par click";
+
 }
 
 // Appelée quand on click le bouton Addition, Achète un bonus si assez de cookies, affiche une erreur sinon, ou si on a atteint la limite
@@ -117,4 +125,6 @@ let addition = function(){
             }
         }
     }
+    tableAddi.textContent = "+" + additionnal;
+    tableTotal.textContent = 1 * multiplicateur + additionnal + "Cookies par click";
 }
