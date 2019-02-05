@@ -11,13 +11,34 @@
 <body>
     <button id="Cookie" type="button" onclick="main()"><img id="imgCookie"src="pictures/CookieV01.svg" alt="Cookies!"/></button>
     <button id="Multiplication" type="button" onclick="augmenterMultiplicateur()">Multiplication!</button>
-    <button id="Addition" type="button" onclick="addition()">Addition!</button>
+    <button class="Addition" type="button" onclick="addition()">Addition!</button>
 
-    <div id="Score">
+    <div>
         Score : 
+        <p id="Score"></p>
     </div>
     <div id="messageUser">
 
+    </div>
+    <div id="Stats">
+        <table>
+            <tr>
+                <th>Info et</th>
+                <th>Statisques</th>
+            </tr>
+            <tr>
+                <td>Clicks totaux</td>
+                <td id="affichageClicks">PlaceHolder</td>
+            </tr>
+            <tr>
+                <td>Multiplicateur</td>
+                <td id="affichageMultiplicateur">PlaceHolder</td>
+            </tr>
+            <tr class="Addition">
+                <td>Addition</td>
+                <td id="affichageAddition">PlaceHolder</td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>
